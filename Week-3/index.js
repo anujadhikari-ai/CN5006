@@ -13,8 +13,6 @@ const EmpSkills= (Skills)=>
 }
 Skills= 'HTML'
 EmpSkills(Skills)
-
-
 const student= require('./StudentInfo')
 const person= require('./Person')
 console.log('Student Name: ' +student.getName())
@@ -24,6 +22,7 @@ console.log(student.Studentgrade())
 console.log('Grade is: ' +student.Studentgrade(55))
 person1= new person('Anuj','Nepal','anujad@gmail.com')
 console.log('Using person Module', person1.getPersonInfo())
+console.log("programe end")
 
 os=require("os")
 const util=require('util')
@@ -36,5 +35,3 @@ console.log("Memory "+ os.totalmem()/1000000000 + "Giga byte")
 console.log(" free: "+os.freemem()/1000000000 + "Giga byte")
 console.log("CPU "+ util.inspect(os.cpus()))
 console.log("Network"+ util.inspect(os.networkInterfaces()))
-console.log("programe end")
-
