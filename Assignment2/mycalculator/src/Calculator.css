@@ -3,43 +3,62 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .Calculator {
   width: 400px;
-  height: 300px;
-  position: relative;
-  margin: 25px;
+  /* CHANGED: 'auto' lets it grow to fit new buttons */
+  height: auto; 
+  background-color: #f0f0f0; /* Added a distinct background color */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
 }
+
 .ButtonStyle {
   background-color: #0997f5;
-  border: 4;
+  border: 1px solid #076eb3;
   color: white;
-  
-  height:60px;
-  width:60px;
+  height: 60px;
+  width: 60px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
+  font-size: 15px;
   cursor: pointer;
-
-
+  margin: 5px;
+  border-radius: 5px;
+  vertical-align: top; /* Keeps buttons aligned */
 }
-.Keypad {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: 80%;
+
+/* NEW STYLE: For the Square and Show Me buttons */
+.WideButton {
+  width: 150px; 
+  font-size: 10px; /* Slightly smaller text to fit */
 }
-.screen-row input{
-  width: 220px;
-  height:30px;
+
+.screen-row input {
+  width: 350px;
+  height: 40px;
   background: rgb(133, 32, 32);
-  border: 55px;
+  border: none;
   color: white;
   padding: 10px;
-  text-align: left;
-  font-size: 20px;
-  }
+  text-align: right;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.ProfileImage {
+    display: block;
+    margin: 20px auto; /* Centers the image horizontally and adds space above/below */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes it a circle */
+    border: 4px solid #0997f5;
+    object-fit: cover;
+    background-color: white;
+}
